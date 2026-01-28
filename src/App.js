@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import CreateNote from "./components/CreateNote";
+import NotesList from "./components/NotesList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200">
+      {/* Header */}
+      <header className="py-6 text-center">
+        <h1 className="text-3xl font-bold text-gray-800">
+          Firebase Notes
+        </h1>
+        <p className="text-gray-500 mt-1">
+          Simple CRUD with React & Firebase
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+
+      {/* Main content */}
+      <main className="space-y-12">
+        <CreateNote />
+        <NotesList />
+      </main>
+
+      {/* Footer */}
+      <footer className="mt-16 pb-6 text-center text-sm text-gray-400">
+        Built with React • Firebase • Tailwind
+      </footer>
     </div>
   );
 }
